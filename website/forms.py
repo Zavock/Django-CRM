@@ -8,7 +8,7 @@ class SignUpForm(UserCreationForm):
         attrs={'class': 'form-control', 'placeholder': 'Email'}))
     first_name = forms.CharField(label="", max_length="50", widget=forms.TextInput(
         attrs={'class': 'form-control', 'placeholder': 'First name'}))
-    lasy_name = forms.CharField(label="", max_length="60", widget=forms.TextInput(
+    last_name = forms.CharField(label="", max_length="60", widget=forms.TextInput(
         attrs={'class': 'form-control', 'placeholder': 'Last name'}))
 
     class Meta:
