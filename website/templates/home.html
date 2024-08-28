@@ -20,8 +20,8 @@
       {% if records %}
         {% for record in records %}
         <tr>
-          <th>{{ record.id }}</th>
-          <td>{{ record.first_name }} {{ record.lasr_name }}</td>
+          <th><a href="{% url "record" record.id %}">{{ record.id }}</a></th>
+          <td>{{ record.first_name }} {{ record.last_name }}</td>
           <td>{{ record.email }}</td>
           <td>{{ record.phone }}</td>
           <td>{{ record.city }}</td>
