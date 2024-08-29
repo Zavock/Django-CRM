@@ -1,11 +1,15 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1 class="text-center">Add Records</h1>
-<form method="POST" action="{% url "add_record" %}">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <a href="{% url "home" %}" class="btn btn-warning">Back</a>
-    <button type="submit" class="btn btn-success">Add</button>
-</form>
+<div class="container border rounded p-4 pb-5" style="width:500px">
+  <h1 class="text-center mb-3">Add Record</h1>
+  <form method="POST" action="{% url "add_record" %}">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <div class="row justify-content-around">
+        <a href="{% url "home" %}" class="col-4 btn btn-warning">Back</a>
+        <button type="submit" class="col-4 btn btn-success">Add</button>
+      </div>
+  </form>
+</div>
 {% endblock %}
